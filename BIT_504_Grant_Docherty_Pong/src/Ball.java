@@ -1,13 +1,13 @@
-//TODO:Commenting
 import java.awt.Color;
 
 public class Ball extends Sprite {
 	
+	// Initializing constant object attributes
 	private static final int BALL_WIDTH = 25;
 	private static final int BALL_HEIGHT = 25;
 	private static final Color BALL_COLOUR = Color.BLACK;
 
-	
+	// Ball object constructor
 	public Ball(int panelWidth, int panelHeight) {
 		setWidth(BALL_WIDTH);
 		setHeight(BALL_HEIGHT);

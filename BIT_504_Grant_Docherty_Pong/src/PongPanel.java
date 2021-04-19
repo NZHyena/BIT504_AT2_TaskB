@@ -14,6 +14,7 @@ import javax.swing.Timer;
 
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
+	// Initializing constant attributes 
 	private final static Color BACKGROUND_COLOUR = Color.WHITE;
 	private final static int TIMER_DELAY = 5;
 	private final static int BALL_MOVEMENT_SPEED = 2;
@@ -28,14 +29,18 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	private final static String WINNER_FONT_FAMILY = "Serif";
 	private final static String WINNER_TEXT = "WIN!";
 
+	// Initializing scores for start of game
 	int player1Score = 0, player2Score = 0;
+	
+	// Creating non-initialized Player enumerator and required paddle and ball objects
 	Player gameWinner;
-
-	GameState gameState = GameState.INITIALISING;
-
 	Ball ball;
 	Paddle paddle1, paddle2;
 
+	// Initializing game state for application
+	GameState gameState = GameState.INITIALISING;
+
+	// PongPannel object constructor
 	public PongPanel() {
 		setBackground(BACKGROUND_COLOUR);
 		Timer timer = new Timer(TIMER_DELAY, this);
@@ -60,12 +65,12 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 				break;
 			}
 			case PLAYING: {
-				moveObject(paddle1);
-				moveObject(paddle2);
+				moveObject(paddle1); // Move Paddle for player 1
+				moveObject(paddle2); // Move Paddle for player 2
 				moveObject(ball); // Move ball
 				checkWallBounce(); // Check for wall bounce
 				checkPaddleBounce(); // Check for paddle bounce
-				checkWin();
+				checkWin(); // Check for game completed
 				break;
 			}
 			case GAMEOVER: {
