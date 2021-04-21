@@ -3,9 +3,10 @@ import java.awt.Color;
 public class Ball extends Sprite {
 	
 	// Initializing constant object attributes
+	private static final Color MY_ORANGE = new Color(255,128,0);
 	private static final int BALL_WIDTH = 25;
 	private static final int BALL_HEIGHT = 25;
-	private static final Color BALL_COLOUR = Color.BLACK;
+	private static final Color BALL_COLOUR = MY_ORANGE;
 
 	// Ball object constructor
 	public Ball(int panelWidth, int panelHeight) {

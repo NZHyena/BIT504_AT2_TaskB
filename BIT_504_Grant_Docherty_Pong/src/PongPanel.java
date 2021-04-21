@@ -14,7 +14,9 @@ import javax.swing.Timer;
 public class PongPanel extends JPanel implements ActionListener, KeyListener {
 
 	// Initializing constant attributes 
-	private final static Color BACKGROUND_COLOUR = Color.WHITE;
+	private final static Color MY_BLUE = new Color(134, 243, 243);
+	private final static Color BACKGROUND_COLOUR = MY_BLUE;
+	private final static Color FONT_COLOUR = Color.BLACK;
 	private final static int TIMER_DELAY = 5;
 	private final static int BALL_MOVEMENT_SPEED = 2;
 	private final static int POINTS_TO_WIN = 11;
@@ -203,6 +205,7 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 			paintSprite(g, ball);
 			paintSprite(g, paddle1);
 			paintSprite(g, paddle2);
+			g.setColor(FONT_COLOUR);
 			paintScores(g);
 			paintWin(g);
 		}
