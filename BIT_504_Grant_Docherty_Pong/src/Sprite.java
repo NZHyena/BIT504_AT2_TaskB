@@ -1,4 +1,3 @@
-//TODO:Commenting
 import java.awt.Color;
 import java.awt.Rectangle;
 
