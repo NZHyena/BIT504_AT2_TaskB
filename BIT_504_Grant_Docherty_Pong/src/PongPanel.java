@@ -16,8 +16,8 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 	// Initializing constant attributes 
 	private final static Color BACKGROUND_COLOUR = Color.WHITE;
 	private final static int TIMER_DELAY = 5;
-	private final static int BALL_MOVEMENT_SPEED = 2;
-	private final static int POINTS_TO_WIN = 11;
+	private final static int BALL_MOVEMENT_SPEED = 4;
+	private final static int POINTS_TO_WIN = 5;
 	private final static int SCORE_TEXT_X = 100;
 	private final static int SCORE_TEXT_Y = 100;
 	private final static int SCORE_FONT_SIZE = 50;
@@ -132,16 +132,16 @@ public class PongPanel extends JPanel implements ActionListener, KeyListener {
 		
 		// Start of if conditional
 		if (event.getKeyCode() == KeyEvent.VK_UP) {
-			paddle2.setyVelocity(-2);
+			paddle2.setyVelocity(-4);
 		} else if (event.getKeyCode() == KeyEvent.VK_DOWN) { // End of if conditional, start of else if conditional
-			paddle2.setyVelocity(2);
+			paddle2.setyVelocity(4);
 		} // End of else if conditional
 		
 		// Start of if conditional
 		if (event.getKeyCode() == KeyEvent.VK_W) {
-			paddle1.setyVelocity(-2);
+			paddle1.setyVelocity(-4);
 		} else if (event.getKeyCode() == KeyEvent.VK_S) { // End of if conditional, start of else if conditional
-			paddle1.setyVelocity(2);
+			paddle1.setyVelocity(4);
 		} // End of else if conditional
 	}
 
