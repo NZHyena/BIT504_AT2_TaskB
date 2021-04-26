@@ -3,9 +3,10 @@ import java.awt.Color;
 public class Paddle extends Sprite {
 
 	// Initializing constant object attributes
+	private static final Color MY_ORANGE = new Color(255,128,0);
 	private static final int PADDLE_WIDTH = 10;
 	private static final int PADDLE_HEIGHT = 100;
-	private static final Color PADDLE_COLOUR = Color.BLACK;
+	private static final Color PADDLE_COLOUR = MY_ORANGE;
 	private static final int DISTANCE_FROM_EDGE = 40;
 
 	// Paddle object constructor
